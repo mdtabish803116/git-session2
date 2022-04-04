@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continent</title>
+    <style>
+            body {
+                background: url("148170.webp");
+            }
+           #container{
+               width : 50%;
+               position : absolute;
+               top : 50%;
+               left: 50%;
+               transform : translate(-50% , -50%);
+               text-align : center;
+               background: rgba(0,0,0 , 0.8);
+               height : 120px;
+           }
+
+           #container > select {
+               border : 1px solid black;
+                width : 50%;
+                margin : auto;
+                margin-top : 10px;
+                height : 30px;
+                font-size : 20px;
+                border-radius : 10px;
+
+           }
+              
+           button {
+               border : none;
+               display : block;
+               margin : auto;
+               margin-top : 30px;
+               cursor : pointer;
+               font-size : 18px;
+               font-family : sans-serif;
+               border-radius : 10px;
+               padding : 5px 5px;
+               background: rgb(255, 160, 122);
+           }
+
+           button:hover{
+               background: rgb(240, 128, 128 , 0.3);
+               width : 150px;
+               font-size : 20px;
+           }
+    </style>
+</head>
+<body>
+    <div id = "container">
+    <select id = "continent_select">
+        <option value = "India"> India </option>
+        <option value = "America"> United States of America </option>
+        <option value = "China"> China </option>
+        <option value = "Nepal"> Nepal  </option>
+        <option value = "Australia"> Australia</option>
+        <option value = "France"> France</option>
+        <option value = "Germany"> Germany </option>
+        <option value = "South Africa"> South Africa </option>
+        <option value = "Nigeria"> Nigeria </option>
+        <option value = "Mexico"> Mexico  </option>
+        <option value = "Argentina"> Argentina  </option>
+        <option value = "Brazil"> Brazil</option>
+        <option value = "Canada"> Canada</option>
+        <option value = "Singapore"> Singapore </option>	
+        <option value = "Sweden"> Sweden </option>	
+    </select>
+    <button id = "btn">Find Continent</button>
+    </div>
+</body>
+   <script>
+       var btn = document.getElementById("btn");
+
+       btn.addEventListener("click",function(){
+        var country = document.getElementById("continent_select").value;
+            switch(country){
+             case "India":
+             case "Nepal":
+             case "China":
+             case "Singapore":
+                    alert("Continent : Asia"  );
+                     break;
+           
+             case "France":
+             case "Germany":
+             case "Sweden":
+                 alert("Continent : Europe");
+                 break;
+
+             case "Mexico":
+             case "America":
+             case "Canada":
+                 alert("Continent : North and Central America");
+                 break;
+
+             case "Brazil":
+             case "Argentina":
+                 alert("Continent : South America");
+                 break;
+
+             case "South Africa":
+             case "Nigeria":
+                 alert("Continent : Africa " );
+                 break;
+             
+            case "Australia":
+                alert("Continent : Oceania");
+                break;
+         }
+
+       })
+      
+   </script>
+</html>
